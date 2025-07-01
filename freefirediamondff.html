@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Fire Diamond Watch Ads</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f3f0fa;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    header {
+      background: #5a2d82;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    button.watch-btn {
+      background: #7e4aaf;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button.watch-btn:hover {
+      background: #935fd1;
+    }
+    #ad-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .ads-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      width: 90%;
+      max-width: 600px;
+      height: 50%;
+    }
+    .ad-slot {
+      background: #fff;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      position: relative;
+    }
+    .ad-slot iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    #countdown {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      color: #fff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>ডিজিটাল মর্ডান অ্যাড প্লেয়ার</header>
+
+  <main>
+    <button class="watch-btn" onclick="showAds()">Watch Ads</button>
+  </main>
+
+  <div id="ad-overlay">
+    <div class="ads-container">
+      <div class="ad-slot">
+        <iframe src="https://www.profitableratecpm.com/bdzybu11?key=e97f59b1cf526641e2845ff0126bbb00"></iframe>
+      </div>
+      <div class="ad-slot" id="popunder-slot">
+      </div>
+    </div>
+    <div id="countdown">10</div>
+  </div>
+
+  <script>
+    const popunderScript = document.createElement('script');
+    popunderScript.type = 'text/javascript';
+    popunderScript.src = '//pl27054581.profitableratecpm.com/c2/67/62/c267622c370fdeda944b5b00d30b6106.js';
+
+    function showAds() {
+      const overlay = document.getElementById('ad-overlay');
+      overlay.style.display = 'flex';
+
+      const slot = document.getElementById('popunder-slot');
+      if (!slot.hasChildNodes()) {
+        slot.appendChild(popunderScript);
+      }
+
+      let seconds = 10;
+      const cd = document.getElementById('countdown');
+      cd.textContent = seconds;
+      const timer = setInterval(() => {
+        seconds--;
+        cd.textContent = seconds;
+        if (seconds <= 0) {
+          clearInterval(timer);
+          overlay.style.display = 'none';
+        }
+      }, 1000);
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,2 @@
+# freefirediamondff
+Diamond Collector Collect coins by watching ads and exchange them for diamonds! Simple, fun, and rewarding — stay connected to earn and withdraw your rewards easily
